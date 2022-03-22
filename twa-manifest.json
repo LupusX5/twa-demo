@@ -1,0 +1,47 @@
+{
+  "packageId": "sh.surge.angus.twa",
+  "host": "angus.surge.sh",
+  "name": "Magical Tiles",
+  "launcherName": "Magical Tile",
+  "display": "standalone",
+  "themeColor": "#FFFFFF",
+  "navigationColor": "#000000",
+  "navigationColorDark": "#000000",
+  "navigationDividerColor": "#000000",
+  "navigationDividerColorDark": "#000000",
+  "backgroundColor": "#FFFFFF",
+  "enableNotifications": true,
+  "startUrl": "/",
+  "iconUrl": "https://late-bubble.surge.sh/512.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "/Users/admin/Documents/Code/apptest/android.keystore",
+    "alias": "android"
+  },
+  "appVersionName": "3",
+  "appVersionCode": 3,
+  "shortcuts": [],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://angus.surge.sh/manifest.json",
+  "fallbackType": "customtabs",
+  "features": {
+    "appsFlyer": {
+      "enabled": true,
+      "appsFlyerId": "BM2uZEZKkS3hjPmpRLN873"
+    }
+  },
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "orientation": "any",
+  "fingerprints": [
+    {
+      "value": "30:50:E1:0A:E1:2F:14:6D:F5:20:B5:7F:58:0A:6E:18:49:D5:27:65:AF:A8:F1:1D:A8:06:FF:D1:48:81:BD:DD"
+    }
+  ],
+  "additionalTrustedOrigins": [],
+  "retainedBundles": [],
+  "appVersion": "3"
+}

@@ -1,0 +1,14 @@
+
+.infoholder {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    border: 1px solid grey;
+    margin: 10px;
+}
+
+.title {
+    color: indigo;
+    font-weight: 900;
+    margin: 0px;
+}

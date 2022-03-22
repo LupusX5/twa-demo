@@ -1,0 +1,309 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3    Copyright 2019 Google Inc. All Rights Reserved.
+4
+5     Licensed under the Apache License, Version 2.0 (the "License");
+6     you may not use this file except in compliance with the License.
+7     You may obtain a copy of the License at
+8
+9         http://www.apache.org/licenses/LICENSE-2.0
+10
+11     Unless required by applicable law or agreed to in writing, software
+12     distributed under the License is distributed on an "AS IS" BASIS,
+13     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14     See the License for the specific language governing permissions and
+15     limitations under the License.
+16-->
+17<!--
+18 The "package" attribute is rewritten by the Gradle build with the value of applicationId.
+19     It is still required here, as it is used to derive paths, for instance when referring
+20     to an Activity by ".MyActivity" instead of the full name. If more Activities are added to the
+21     application, the package attribute will need to reflect the correct path in order to use
+22     the abbreviated format.
+23-->
+24<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+25    package="sh.surge.angus.twa"
+26    android:versionCode="3"
+27    android:versionName="3" >
+28
+29    <uses-sdk
+30        android:minSdkVersion="19"
+30-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml
+31        android:targetSdkVersion="31" />
+31-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml
+32
+33    <uses-permission android:name="android.permission.INTERNET" />
+33-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:26:9-70
+33-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:26:26-68
+34    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+34-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:28:9-82
+34-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:28:26-80
+35    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+35-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:30:9-79
+35-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:30:26-77
+36    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+36-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:32:9-78
+36-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:32:26-76
+37    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+37-->[com.android.installreferrer:installreferrer:2.2] /Users/admin/.gradle/caches/transforms-2/files-2.1/2674770e5f73f4b89170b4425b136bd0/installreferrer-2.2/AndroidManifest.xml:9:5-110
+37-->[com.android.installreferrer:installreferrer:2.2] /Users/admin/.gradle/caches/transforms-2/files-2.1/2674770e5f73f4b89170b4425b136bd0/installreferrer-2.2/AndroidManifest.xml:9:22-107
+38
+39    <queries>
+39-->[com.google.androidbrowserhelper:androidbrowserhelper:2.3.0] /Users/admin/.gradle/caches/transforms-2/files-2.1/572def1352afcb56982bb86acf89682d/androidbrowserhelper-2.3.0/AndroidManifest.xml:26:5-34:15
+40        <intent>
+40-->[com.google.androidbrowserhelper:androidbrowserhelper:2.3.0] /Users/admin/.gradle/caches/transforms-2/files-2.1/572def1352afcb56982bb86acf89682d/androidbrowserhelper-2.3.0/AndroidManifest.xml:27:9-33:18
+41            <action android:name="android.intent.action.VIEW" />
+41-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:133:17-68
+41-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:133:25-66
+42
+43            <category android:name="android.intent.category.BROWSABLE" />
+43-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:135:17-77
+43-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:135:27-75
+44
+45            <data android:scheme="https" />
+45-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:136:17-137:54
+45-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:136:23-45
+46        </intent>
+47    </queries>
+48
+49    <application
+49-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:37:5-184:19
+50        android:name="sh.surge.angus.twa.Application"
+50-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:38:9-35
+51        android:allowBackup="true"
+51-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:39:9-35
+52        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+52-->[androidx.core:core:1.1.0] /Users/admin/.gradle/caches/transforms-2/files-2.1/e601daed4ba62929db8b322b2974c8f8/core-1.1.0/AndroidManifest.xml:24:18-86
+53        android:fullBackupContent="@xml/appsflyer_backup_rules"
+53-->[com.appsflyer:af-android-sdk:5.4.0] /Users/admin/.gradle/caches/transforms-2/files-2.1/8446ddc8b774ef206d25da5827215cc5/af-android-sdk-5.4.0/AndroidManifest.xml:14:18-73
+54        android:icon="@mipmap/ic_launcher"
+54-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:40:9-43
+55        android:label="@string/appName"
+55-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:41:9-40
+56        android:manageSpaceActivity="com.google.androidbrowserhelper.trusted.ManageDataLauncherActivity"
+56-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:43:9-105
+57        android:supportsRtl="true"
+57-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:45:9-35
+58        android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+58-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:46:9-68
+59        <meta-data
+59-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:48:9-50:58
+60            android:name="asset_statements"
+60-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:49:13-44
+61            android:resource="@string/assetStatements" />
+61-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:50:13-55
+62        <meta-data
+62-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:53:13-55:58
+63            android:name="web_manifest_url"
+63-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:54:17-48
+64            android:value="@string/webManifestUrl" />
+64-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:55:17-55
+65        <meta-data
+65-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:58:9-60:52
+66            android:name="twa_generator"
+66-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:59:13-41
+67            android:value="@string/generatorApp" />
+67-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:60:13-49
+68
+69        <activity android:name="com.google.androidbrowserhelper.trusted.ManageDataLauncherActivity" >
+69-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:65:13-69:24
+69-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:65:23-104
+70            <meta-data
+70-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:66:13-68:53
+71                android:name="android.support.customtabs.trusted.MANAGE_SPACE_URL"
+71-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:67:17-83
+72                android:value="@string/launchUrl" />
+72-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:68:17-50
+73        </activity>
+74        <activity
+74-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:72:9-141:20
+75            android:name="sh.surge.angus.twa.LauncherActivity"
+75-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:72:19-50
+76            android:alwaysRetainTaskState="true"
+76-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:73:13-49
+77            android:exported="true"
+77-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:75:13-36
+78            android:label="@string/launcherName" >
+78-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:74:13-49
+79            <meta-data
+79-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:76:13-77:53
+80                android:name="android.support.customtabs.trusted.DEFAULT_URL"
+80-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:76:24-85
+81                android:value="@string/launchUrl" />
+81-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:77:17-50
+82            <meta-data
+82-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:79:13-81:58
+83                android:name="android.support.customtabs.trusted.STATUS_BAR_COLOR"
+83-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:80:17-83
+84                android:resource="@color/colorPrimary" />
+84-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:81:17-55
+85            <meta-data
+85-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:83:13-85:61
+86                android:name="android.support.customtabs.trusted.NAVIGATION_BAR_COLOR"
+86-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:84:17-87
+87                android:resource="@color/navigationColor" />
+87-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:85:17-58
+88            <meta-data
+88-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:87:13-89:65
+89                android:name="android.support.customtabs.trusted.NAVIGATION_BAR_COLOR_DARK"
+89-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:88:17-92
+90                android:resource="@color/navigationColorDark" />
+90-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:89:17-62
+91            <meta-data
+91-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:91:13-93:68
+92                android:name="androix.browser.trusted.NAVIGATION_BAR_DIVIDER_COLOR"
+92-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:92:17-84
+93                android:resource="@color/navigationDividerColor" />
+93-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:93:17-65
+94            <meta-data
+94-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:95:13-97:72
+95                android:name="androix.browser.trusted.NAVIGATION_BAR_DIVIDER_COLOR_DARK"
+95-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:96:17-89
+96                android:resource="@color/navigationDividerColorDark" />
+96-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:97:17-69
+97            <meta-data
+97-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:99:13-100:54
+98                android:name="android.support.customtabs.trusted.SPLASH_IMAGE_DRAWABLE"
+98-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:99:24-95
+99                android:resource="@drawable/splash" />
+99-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:100:17-52
+100            <meta-data
+100-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:102:13-103:60
+101                android:name="android.support.customtabs.trusted.SPLASH_SCREEN_BACKGROUND_COLOR"
+101-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:102:24-104
+102                android:resource="@color/backgroundColor" />
+102-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:103:17-58
+103            <meta-data
+103-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:105:13-106:71
+104                android:name="android.support.customtabs.trusted.SPLASH_SCREEN_FADE_OUT_DURATION"
+104-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:105:24-105
+105                android:value="@integer/splashScreenFadeOutDuration" />
+105-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:106:17-69
+106            <meta-data
+106-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:108:13-109:60
+107                android:name="android.support.customtabs.trusted.FILE_PROVIDER_AUTHORITY"
+107-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:108:24-97
+108                android:value="@string/providerAuthority" />
+108-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:109:17-58
+109            <meta-data
+109-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:111:13-97
+110                android:name="android.app.shortcuts"
+110-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:111:24-60
+111                android:resource="@xml/shortcuts" />
+111-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:111:61-94
+112            <meta-data
+112-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:113:13-114:56
+113                android:name="android.support.customtabs.trusted.FALLBACK_STRATEGY"
+113-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:113:24-91
+114                android:value="@string/fallbackType" />
+114-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:114:17-53
+115            <meta-data
+115-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:120:13-121:54
+116                android:name="android.support.customtabs.trusted.SCREEN_ORIENTATION"
+116-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:120:24-92
+117                android:value="@string/orientation" />
+117-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:121:17-52
+118
+119            <intent-filter>
+119-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:127:13-130:29
+120                <action android:name="android.intent.action.MAIN" />
+120-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:128:17-69
+120-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:128:25-66
+121
+122                <category android:name="android.intent.category.LAUNCHER" />
+122-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:129:17-77
+122-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:129:27-74
+123            </intent-filter>
+124            <intent-filter android:autoVerify="true" >
+124-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:132:13-138:29
+124-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:132:28-53
+125                <action android:name="android.intent.action.VIEW" />
+125-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:133:17-68
+125-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:133:25-66
+126
+127                <category android:name="android.intent.category.DEFAULT" />
+127-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:134:17-76
+127-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:134:27-73
+128                <category android:name="android.intent.category.BROWSABLE" />
+128-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:135:17-77
+128-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:135:27-75
+129
+130                <data
+130-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:136:17-137:54
+131                    android:host="@string/hostName"
+131-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:137:21-52
+132                    android:scheme="https" />
+132-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:136:23-45
+133            </intent-filter>
+134        </activity>
+135        <activity android:name="com.google.androidbrowserhelper.trusted.FocusActivity" />
+135-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:143:9-90
+135-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:143:19-87
+136        <activity
+136-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:145:9-146:62
+137            android:name="com.google.androidbrowserhelper.trusted.WebViewFallbackActivity"
+137-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:145:19-97
+138            android:configChanges="orientation|screenSize" />
+138-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:146:13-59
+139
+140        <provider
+140-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:148:9-156:20
+141            android:name="androidx.core.content.FileProvider"
+141-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:149:13-62
+142            android:authorities="@string/providerAuthority"
+142-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:150:13-60
+143            android:exported="false"
+143-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:152:13-37
+144            android:grantUriPermissions="true" >
+144-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:151:13-47
+145            <meta-data
+145-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:153:13-155:53
+146                android:name="android.support.FILE_PROVIDER_PATHS"
+146-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:154:17-67
+147                android:resource="@xml/filepaths" />
+147-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:155:17-50
+148        </provider>
+149
+150        <service
+150-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:158:9-173:19
+151            android:name="sh.surge.angus.twa.DelegationService"
+151-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:159:13-46
+152            android:enabled="@bool/enableNotification"
+152-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:160:13-55
+153            android:exported="@bool/enableNotification" >
+153-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:161:13-56
+154            <meta-data
+154-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:164:17-166:73
+155                android:name="android.support.customtabs.trusted.SMALL_ICON"
+155-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:165:21-81
+156                android:resource="@drawable/ic_notification_icon" />
+156-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:166:21-70
+157
+158            <intent-filter>
+158-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:169:13-172:29
+159                <action android:name="android.support.customtabs.trusted.TRUSTED_WEB_ACTIVITY_SERVICE" />
+159-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:170:17-105
+159-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:170:25-103
+160
+161                <category android:name="android.intent.category.DEFAULT" />
+161-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:134:17-76
+161-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:134:27-73
+162            </intent-filter>
+163        </service>
+164
+165        <receiver
+165-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:176:13-182:20
+166            android:name="com.appsflyer.SingleInstallBroadcastReceiver"
+166-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:177:11-70
+167            android:exported="true" >
+167-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:178:11-34
+168            <intent-filter>
+168-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:179:11-181:27
+169                <action android:name="com.android.vending.INSTALL_REFERRER" />
+169-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:180:13-75
+169-->/Users/admin/Documents/Code/apptest/app/src/main/AndroidManifest.xml:180:21-72
+170            </intent-filter>
+171        </receiver>
+172    </application>
+173
+174</manifest>

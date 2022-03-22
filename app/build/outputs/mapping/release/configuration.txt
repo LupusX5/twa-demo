@@ -1,0 +1,382 @@
+# The proguard configuration file for the following section is /Users/admin/Documents/Code/apptest/app/build/intermediates/proguard-files/proguard-android.txt-4.1.3
+# This is a configuration file for ProGuard.
+# http://proguard.sourceforge.net/index.html#manual/usage.html
+#
+# Starting with version 2.2 of the Android plugin for Gradle, this file is distributed together with
+# the plugin and unpacked at build-time. The files in $ANDROID_HOME are no longer maintained and
+# will be ignored by new version of the Android plugin for Gradle.
+
+# Optimization is turned off by default. Dex does not like code run
+# through the ProGuard optimize steps (and performs some
+# of these optimizations on its own).
+# Note that if you want to enable optimization, you cannot just
+# include optimization flags in your own project configuration file;
+# instead you will need to point to the
+# "proguard-android-optimize.txt" file instead of this one from your
+# project.properties file.
+-dontoptimize
+
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-verbose
+
+# Preserve some attributes that may be required for reflection.
+-keepattributes *Annotation*,Signature,InnerClasses,EnclosingMethod
+
+-keep public class com.google.vending.licensing.ILicensingService
+-keep public class com.android.vending.licensing.ILicensingService
+-keep public class com.google.android.vending.licensing.ILicensingService
+-dontnote com.android.vending.licensing.ILicensingService
+-dontnote com.google.vending.licensing.ILicensingService
+-dontnote com.google.android.vending.licensing.ILicensingService
+
+# For native methods, see http://proguard.sourceforge.net/manual/examples.html#native
+-keepclasseswithmembernames,includedescriptorclasses class * {
+    native <methods>;
+}
+
+# Keep setters in Views so that animations can still work.
+-keepclassmembers public class * extends android.view.View {
+    void set*(***);
+    *** get*();
+}
+
+# We want to keep methods in Activity that could be used in the XML attribute onClick.
+-keepclassmembers class * extends android.app.Activity {
+    public void *(android.view.View);
+}
+
+# For enumeration classes, see http://proguard.sourceforge.net/manual/examples.html#enumerations
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keepclassmembers class * implements android.os.Parcelable {
+    public static final ** CREATOR;
+}
+
+# Preserve annotated Javascript interface methods.
+-keepclassmembers class * {
+    @android.webkit.JavascriptInterface <methods>;
+}
+
+# The support libraries contains references to newer platform versions.
+# Don't warn about those in case this app is linking against an older
+# platform version. We know about them, and they are safe.
+-dontnote android.support.**
+-dontnote androidx.**
+-dontwarn android.support.**
+-dontwarn androidx.**
+
+# This class is deprecated, but remains for backward compatibility.
+-dontwarn android.util.FloatMath
+
+# Understand the @Keep support annotation.
+-keep class android.support.annotation.Keep
+-keep class androidx.annotation.Keep
+
+-keep @android.support.annotation.Keep class * {*;}
+-keep @androidx.annotation.Keep class * {*;}
+
+-keepclasseswithmembers class * {
+    @android.support.annotation.Keep <methods>;
+}
+
+-keepclasseswithmembers class * {
+    @androidx.annotation.Keep <methods>;
+}
+
+-keepclasseswithmembers class * {
+    @android.support.annotation.Keep <fields>;
+}
+
+-keepclasseswithmembers class * {
+    @androidx.annotation.Keep <fields>;
+}
+
+-keepclasseswithmembers class * {
+    @android.support.annotation.Keep <init>(...);
+}
+
+-keepclasseswithmembers class * {
+    @androidx.annotation.Keep <init>(...);
+}
+
+# These classes are duplicated between android.jar and org.apache.http.legacy.jar.
+-dontnote org.apache.http.**
+-dontnote android.net.http.**
+
+# These classes are duplicated between android.jar and core-lambda-stubs.jar.
+-dontnote java.lang.invoke.**
+
+# End of content from /Users/admin/Documents/Code/apptest/app/build/intermediates/proguard-files/proguard-android.txt-4.1.3
+# The proguard configuration file for the following section is /Users/admin/Documents/Code/apptest/app/build/intermediates/aapt_proguard_file/release/aapt_rules.txt
+-keep class androidx.core.app.CoreComponentFactory { <init>(); }
+-keep class androidx.core.content.FileProvider { <init>(); }
+-keep class com.appsflyer.SingleInstallBroadcastReceiver { <init>(); }
+-keep class com.google.androidbrowserhelper.trusted.FocusActivity { <init>(); }
+-keep class com.google.androidbrowserhelper.trusted.ManageDataLauncherActivity { <init>(); }
+-keep class com.google.androidbrowserhelper.trusted.WebViewFallbackActivity { <init>(); }
+-keep class sh.surge.angus.twa.Application { <init>(); }
+-keep class sh.surge.angus.twa.DelegationService { <init>(); }
+-keep class sh.surge.angus.twa.LauncherActivity { <init>(); }
+-keep class androidx.browser.browseractions.BrowserActionsFallbackMenuView { <init>(android.content.Context, android.util.AttributeSet); }
+
+
+# End of content from /Users/admin/Documents/Code/apptest/app/build/intermediates/aapt_proguard_file/release/aapt_rules.txt
+# The proguard configuration file for the following section is /Users/admin/.gradle/caches/transforms-2/files-2.1/8446ddc8b774ef206d25da5827215cc5/af-android-sdk-5.4.0/proguard.txt
+
+
+
+-keeppackagenames com.appsflyer.internal,com.appsflyer
+-dontwarn com.android.installreferrer,com.appsflyer.**
+
+
+
+
+# https://support.appsflyer.com/hc/en-us/articles/207032126-AppsFlyer-SDK-Integration-Android#11-known-issues
+# Also will make it easier to investigate stack traces coming from clients
+-keep class com.appsflyer.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.appsflyer.internal.a$4 {
+    <init>();
+}
+
+-keep class com.appsflyer.internal.a$a {
+    com.appsflyer.internal.a$a ι;
+    com.appsflyer.internal.a$a Ι;
+    java.lang.String ı;
+}
+
+-keep class com.appsflyer.internal.a$e {
+    com.appsflyer.internal.a$e ǃ;
+    com.appsflyer.internal.a$e ɩ;
+    com.appsflyer.internal.a$e ı;
+    java.lang.String Ι;
+}
+
+-keep class com.appsflyer.internal.a$d {
+    com.appsflyer.internal.a$d ı;
+    com.appsflyer.internal.a$d ι;
+    java.lang.String ɩ;
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.internal.b {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.internal.c {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.internal.c$a$c {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.internal.j {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.AFDeepLinkManager {
+    <init>();
+}
+
+-keep class com.appsflyer.AFEvent {
+    int ɨ;
+    android.content.Context context();
+    java.lang.String key();
+    java.util.Map params();
+    boolean isEncrypt();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.internal.g {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.AFExecutor {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.AFFacebookDeferredDeeplink {
+    <init>();
+}
+
+-keep class com.appsflyer.internal.n$2 {
+    <init>();
+}
+
+-keep class com.appsflyer.internal.k$b {
+    com.appsflyer.internal.k$b ɩ;
+    com.appsflyer.internal.k$b Ι;
+    com.appsflyer.internal.k$b ι;
+    com.appsflyer.internal.k$b ǃ;
+    com.appsflyer.internal.k$b ı;
+    com.appsflyer.internal.k$b Ɩ;
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.internal.t {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.internal.p {
+    <init>();
+}
+
+-keep class com.appsflyer.AFLogger {
+    void afRDLog(java.lang.String);
+    void afWarnLog(java.lang.String);
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.internal.s {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.internal.q {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.AFVersionDeclaration {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.internal.u {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.internal.v {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.AppsFlyerProperties {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.internal.y {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.internal.z {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.internal.ae {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.internal.ah {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.internal.ag {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.ServerParameters {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.internal.af {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.internal.model.event.BackgroundEvent {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.internal.model.event.Purchase {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.appsflyer.internal.am {
+    <init>();
+}
+
+-keep class com.appsflyer.internal.al {
+    <init>(java.io.InputStream,int[],int,byte[],int,int);
+}
+
+# Enumerations.
+-keepclassmembers enum  * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keep class com.appsflyer.AFKeystoreWrapper
+
+-keep,allowshrinking class com.appsflyer.AFKeystoreWrapper
+
+-keep class com.appsflyer.AFVersionDeclaration
+
+-keepclassmembers class com.appsflyer.AFVersionDeclaration {
+    private static java.lang.String googleSdkIdentifier;
+    public static void init();
+}
+
+# ## Xamarin build
+-keep class com.appsflyer.CreateOneLinkHttpTask
+
+-keepclassmembers class com.appsflyer.CreateOneLinkHttpTask {
+    <fields>;
+    <methods>;
+}
+
+# End of content from /Users/admin/.gradle/caches/transforms-2/files-2.1/8446ddc8b774ef206d25da5827215cc5/af-android-sdk-5.4.0/proguard.txt
+# The proguard configuration file for the following section is /Users/admin/.gradle/caches/transforms-2/files-2.1/deb038085878e9bf6466a03c9c270797/oaid-5.4.0/proguard.txt
+-keep class com.bun.miitmdid.core.** {*;}
+-keep class com.huawei.hms.ads.** { *; }
+-keep interface com.huawei.hms.ads.** { *; }
+# End of content from /Users/admin/.gradle/caches/transforms-2/files-2.1/deb038085878e9bf6466a03c9c270797/oaid-5.4.0/proguard.txt
+# The proguard configuration file for the following section is /Users/admin/.gradle/caches/transforms-2/files-2.1/e601daed4ba62929db8b322b2974c8f8/core-1.1.0/proguard.txt
+# aapt2 is not (yet) keeping FQCNs defined in the appComponentFactory <application> attribute
+-keep class androidx.core.app.CoreComponentFactory
+
+# End of content from /Users/admin/.gradle/caches/transforms-2/files-2.1/e601daed4ba62929db8b322b2974c8f8/core-1.1.0/proguard.txt
+# The proguard configuration file for the following section is /Users/admin/.gradle/caches/transforms-2/files-2.1/90ecde5404179819368e2359ab771b50/versionedparcelable-1.1.0/proguard.txt
+-keep public class * implements androidx.versionedparcelable.VersionedParcelable
+-keep public class android.support.**Parcelizer { *; }
+-keep public class androidx.**Parcelizer { *; }
+-keep public class androidx.versionedparcelable.ParcelImpl
+
+# End of content from /Users/admin/.gradle/caches/transforms-2/files-2.1/90ecde5404179819368e2359ab771b50/versionedparcelable-1.1.0/proguard.txt
+# The proguard configuration file for the following section is /Users/admin/.gradle/caches/transforms-2/files-2.1/8dff3d511d8ee4d7a6cbce6b846b6a9b/rules/lib/META-INF/proguard/androidx-annotations.pro
+-keep,allowobfuscation @interface androidx.annotation.Keep
+-keep @androidx.annotation.Keep class * {*;}
+
+-keepclasseswithmembers class * {
+    @androidx.annotation.Keep <methods>;
+}
+
+-keepclasseswithmembers class * {
+    @androidx.annotation.Keep <fields>;
+}
+
+-keepclasseswithmembers class * {
+    @androidx.annotation.Keep <init>(...);
+}
+
+# End of content from /Users/admin/.gradle/caches/transforms-2/files-2.1/8dff3d511d8ee4d7a6cbce6b846b6a9b/rules/lib/META-INF/proguard/androidx-annotations.pro
+# The proguard configuration file for the following section is /Users/admin/.gradle/caches/transforms-2/files-2.1/1fed12a61eaf3956026778ada29c2705/lifecycle-runtime-2.0.0/proguard.txt
+-keepattributes *Annotation*
+
+-keepclassmembers enum androidx.lifecycle.Lifecycle$Event {
+    <fields>;
+}
+
+-keep !interface * implements androidx.lifecycle.LifecycleObserver {
+}
+
+-keep class * implements androidx.lifecycle.GeneratedAdapter {
+    <init>(...);
+}
+
+-keepclassmembers class ** {
+    @androidx.lifecycle.OnLifecycleEvent *;
+}
+# End of content from /Users/admin/.gradle/caches/transforms-2/files-2.1/1fed12a61eaf3956026778ada29c2705/lifecycle-runtime-2.0.0/proguard.txt
+# The proguard configuration file for the following section is <unknown>
+-ignorewarnings
+# End of content from <unknown>

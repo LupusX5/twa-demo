@@ -1,0 +1,6 @@
+[{
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target" : { "namespace": "android_app", "package_name": "sh.surge.angus.twa",
+                     "sha256_cert_fingerprints": ["30:50:E1:0A:E1:2F:14:6D:F5:20:B5:7F:58:0A:6E:18:49:D5:27:65:AF:A8:F1:1D:A8:06:FF:D1:48:81:BD:DD"] }
+      }
+]
